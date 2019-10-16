@@ -1,0 +1,11 @@
+BOOKCASEID: -1
+BOOKCASEID: 1
+The Way of Kings|122572|1|The Cosmere,Book 1,Depresion,|Book|Brandon Sanderson|The Stormlight Archive|Fantasy|
+Words of Radiance|453955|1|The Cosmere,Book 2,Cool Sword Fight,|Book|Brandon Sanderson|The Stormlight Archive|Fantasy|
+Oathbringer|851903|1|The Cosmere,Book 3,Very long,|Book|Brandon Sanderson|The Stormlight Archive|Fantasy|
+Beyond Good and Evil|18700|1|Old Classic,Friendly Pig Man,|Game|PC|Adventure|
+Baldurs Gate 2: Shadows of Amn|506063|1|Dungeons and Dragons,Dialog Heavy,Very long,|Game|PC|RPG|
+BOOKCASEID: 2
+BOOKCASEID: 3
+BOOKCASEID: 4
+BOOKCASEID: 5

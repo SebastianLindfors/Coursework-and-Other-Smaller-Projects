@@ -1,0 +1,9 @@
+*.class
+*.xml
+*.iml
+
+Codewars/Java/*/out/
+Codewars/Java/*/.idea/
+
+Newton Objektsorienterad Programmering 1/*/out/
+Newton Objektsorienterad Programmering 1/*/.idea/

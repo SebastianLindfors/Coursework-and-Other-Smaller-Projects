@@ -1,0 +1,16 @@
+BOOKCASEID: -1
+BOOKCASEID: 1
+The Way of Kings|122572|1|The Cosmere,Book 1,Depresion,|Book|Brandon Sanderson|The Stormlight Archive|Fantasy|
+Words of Radiance|453955|1|The Cosmere,Book 2,Cool Sword Fight,|Book|Brandon Sanderson|The Stormlight Archive|Fantasy|
+Oathbringer|851903|1|The Cosmere,Book 3,Very long,|Book|Brandon Sanderson|The Stormlight Archive|Fantasy|
+Beyond Good and Evil|18700|1|Old Classic,Friendly Pig Man,|Game|PC|Adventure|
+Baldurs Gate 2: Shadows of Amn|506063|1|Dungeons and Dragons,Dialog Heavy,Very long,|Game|PC|RPG|
+BOOKCASEID: 2
+Dungeon Crawling Fools|944723|2|Webcomic,Funny,Dungeons and Dragons,Book 1,|Book|Rich Burlew|The Order of the Stick|Fantasy Comic|
+Interview with a Vampire|569337|2|Vampire,Costume Drama,| Movie|        1994|null|
+Evil Genius|127994|2|James Bond Parody,Megalomaniacal,|Game|PC|null|
+No Cure for the Paladin Blues|695484|2|Comedy,Webcomci,Book 2,|Book|Rich Burlew|The Order of the Stick|Fantasy Comic|
+Super Mario |667481|2|,|Game|Game Boy|null|
+BOOKCASEID: 3
+BOOKCASEID: 4
+BOOKCASEID: 5
