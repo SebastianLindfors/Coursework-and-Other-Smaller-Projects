@@ -13,6 +13,13 @@ public class PyramidSlideDown {
                 pyramid[i][j] = pyramid[i][j] + Math.max(pyramid[i+1][j], pyramid[i+1][j+1]);
             }
         }
+
+//       for (int i = 0; i < pyramid.length; i++) {
+//            for (int j = 0; j < pyramid[i].length; j++) {
+//                System.out.print(pyramid[i][j]+ " ");
+//            }
+//            System.out.println("");
+//        }
         return pyramid[0][0];
 
     }

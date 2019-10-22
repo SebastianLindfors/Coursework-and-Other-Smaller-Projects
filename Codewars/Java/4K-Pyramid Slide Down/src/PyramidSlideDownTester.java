@@ -25,4 +25,14 @@ public class PyramidSlideDownTester {
         };
         assertEquals(1074, PyramidSlideDown.longestSlideDown(test));
     }
+
+    @Test
+    public void smallTest() {
+        int[][] test = new int[][]{{3},
+                {7, 4},
+                {2, 4, 6},
+                {8, 5, 9, 3}
+        };
+        assertEquals(23, PyramidSlideDown.longestSlideDown(test));
+    }
 }
