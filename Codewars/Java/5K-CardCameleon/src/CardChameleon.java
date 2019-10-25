@@ -30,6 +30,13 @@ public class CardChameleon {
             put("3H", 'P'); put("4H", 'Q'); put("5H", 'R'); put("6H", 'S'); put("7H", 'T'); put("8H", 'U');
             put("9H", 'V'); put("TH", 'W'); put("JH", 'X'); put("QH", 'Y'); put("KH", 'Z'); put("XR", ' ');
         }};
+        final Map<Character, String> RED_CIPHER_REVERSE = new HashMap<Character, String>() {{
+            put("A", "AD"); put("B", "2D"); put("3D", 'C');
+            put("4D", 'D'); put("5D", 'E'); put("6D", 'F'); put("7D", 'G'); put("8D", 'H'); put("9D", 'I');
+            put("TD", 'J'); put("JD", 'K'); put("QD", 'L'); put("KD", 'M'); put("AH", 'N'); put("2H", 'O');
+            put("3H", 'P'); put("4H", 'Q'); put("5H", 'R'); put("6H", 'S'); put("7H", 'T'); put("8H", 'U');
+            put("9H", 'V'); put("TH", 'W'); put("JH", 'X'); put("QH", 'Y'); put("KH", 'Z'); put("XR", ' ');
+        }};
 
 
         ArrayList<String> cardList = new ArrayList<String>();
