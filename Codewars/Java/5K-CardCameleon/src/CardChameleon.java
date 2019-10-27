@@ -92,9 +92,11 @@ public class CardChameleon {
             String firstRedCard = REVERSE_RED_CIPHER.get(ch);
             String firstBlackCard;
             String currentCard = pairedDeck.getFirst();
-            String lastCard;
+            String lastCard = pairedDeck.getLast();
             while (currentCard != firstRedCard) {
+                pairedDeck.addLast(lastCard);
                 lastCard = currentCard;
+
                 System.out.println(currentCard);
             }
 
