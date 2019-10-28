@@ -35,6 +35,10 @@ public class CardChameleon {
         for (String key : RED_CIPHER.keySet()) {
             REVERSE_RED_CIPHER.put(RED_CIPHER.get(key), key);
         }
+        Map<Character, String> REVERSE_BLACK_CIPHER = new HashMap<Character, String>();
+        for (String key : BLACK_CIPHER.keySet()) {
+            REVERSE_BLACK_CIPHER.put(BLACK_CIPHER.get(key), key);
+        }
 
 
         ArrayList<String> cardList = new ArrayList<String>();
@@ -43,7 +47,6 @@ public class CardChameleon {
             System.out.print(card + " ");
         }
         System.out.println("");
-
 
         ArrayList<String> blackCards = new ArrayList<>();
         ArrayList<String> redCards = new ArrayList<>();
@@ -73,37 +76,69 @@ public class CardChameleon {
         if (!cardList.isEmpty()) {return null;} //Invalid deck
         System.out.println("\nDeck split and validated!");
 
-        Deque<String> pairedDeck = new LinkedList<String>();
+        String[] cipherDeck = new String[54];
         for (int i = 26; i >= 0; i--) {
-            String card = blackCards.remove(i);
+            cipherDeck[i*2+1] = blackCards.get(0);
+            blackCards.remove(0);
+            cipherDeck[i*2] = redCards.get(0);
+            redCards.remove(0);
+        }
+        for (String card : cipherDeck) {
             System.out.print(card + " ");
-            pairedDeck.addFirst(card);
-            card = redCards.remove(i);
-            System.out.print(card + " ");
-            pairedDeck.addFirst(card);
         }
         System.out.println();
-        for (String card : pairedDeck) {
-            System.out.print(card + " ");
-        }
-        System.out.println("\nPaired deck created!");
 
+        StringBuilder cipherText = new StringBuilder();
         for (Character ch : message.toCharArray()) {
-            String firstRedCard = REVERSE_RED_CIPHER.get(ch);
-            String firstBlackCard;
-            String currentCard = pairedDeck.getFirst();
-            String lastCard = pairedDeck.getLast();
-            while (currentCard != firstRedCard) {
-                pairedDeck.addLast(lastCard);
-                lastCard = currentCard;
 
-                System.out.println(currentCard);
+            String firstRedCard = "";
+            String firstBlackCard = REVERSE_BLACK_CIPHER.get(ch);
+            for (int i = 1; i < cipherDeck.length; i = i + 2) {
+                if (cipherDeck[i].equals(firstBlackCard)) {
+                    firstRedCard = cipherDeck[i-1];
+                    break;
+                }
+            }
+            String secondBlackCard = REVERSE_BLACK_CIPHER.get(RED_CIPHER.get(firstRedCard));
+            String secondRedCard = "";
+            int exchangeIndex = -1;
+            boolean found = false;
+            for (int i = 1; i < cipherDeck.length; i = i + 2) {
+                if (cipherDeck[i].equals(secondBlackCard)) {
+                    secondRedCard = cipherDeck[i-1];
+                    exchangeIndex = i - 1;
+                    found = true;
+                    break;
+                }
+            }
+            if (!found) {
+                System.out.println(ch + " " + firstBlackCard + " " + firstRedCard + " " + secondBlackCard + " " + secondRedCard);
             }
 
+            cipherText.append(RED_CIPHER.get(secondRedCard));
+
+            String temp0 = cipherDeck[exchangeIndex];
+            String temp1 = cipherDeck[1];
+            cipherDeck[exchangeIndex] = cipherDeck[0];
+
+            for (int i = 0; i < cipherDeck.length - 3; i = i + 2) {
+                cipherDeck[i] = cipherDeck[i+2];
+                cipherDeck[i+1] = cipherDeck[i + 3];
+            }
+            cipherDeck[cipherDeck.length - 2] = temp0;
+            cipherDeck[cipherDeck.length - 1] = temp1;
+
+            for (String card : cipherDeck) {
+                System.out.print(card + " ");
+            }
+            System.out.println();
+
+
         }
 
 
-        return null;
+
+        return cipherText.toString();
     }
 
     /**
