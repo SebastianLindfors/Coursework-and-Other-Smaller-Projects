@@ -13,7 +13,7 @@ public class JadenCase {
             return null;
         }
         String[] words = phrase.split(" ");
-        
+
         String jadenphrase = "";
 
         for (String word : words) {
