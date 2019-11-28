@@ -44,7 +44,7 @@ public class ConwaysGameOfLife {
             for (int j : liveCells.get(i).keySet()) {
                 for (int[] offset : NEIGHBOURS) {
                     if (!liveCells.containsKey(i + offset[0])) {
-                        if (liveCells.get(i + offset[0]).containsKey(j + offset[1])) {
+                        if (!liveCells.get(i + offset[0]).containsKey(j + offset[1])) {
                             if (deadNeighbourCells.containsKey(i + offset[0])) {
                                 if (deadNeighbourCells.get(i + offset[0]).containsKey(j + offset[1]) ) {
                                     deadNeighbourCells.get(i).put(j, deadNeighbourCells.get(i).get(j) + 1);
@@ -60,8 +60,6 @@ public class ConwaysGameOfLife {
                         }
                     }
                 }
-
-
 
             }
         }

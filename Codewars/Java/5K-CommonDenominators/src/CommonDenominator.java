@@ -5,7 +5,7 @@ import java.util.Map;
  *  https://www.codewars.com/kata/551f23362ff852e2ab000037
  *
  *  Warning: This is a REALLY messy solution.
- *  
+ *
  *  Author: Sebastian Lindfors
  */
 public class CommonDenominator {
