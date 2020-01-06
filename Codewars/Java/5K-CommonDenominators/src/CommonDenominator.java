@@ -32,7 +32,6 @@ public class CommonDenominator {
                 if (commonPrimes.containsKey(j)) {
                     if (primes.get(j) > commonPrimes.get(j)) {
                         commonPrimes.put(j, primes.get(j));
-
                     }
                 }
                 else {
