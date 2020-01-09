@@ -32,6 +32,6 @@ public class RailFenceCipher {
 
     static String decode(String s, int n) {
         // Your code here
-        return "ABC";
+        return "ABCD";
     }
 }
