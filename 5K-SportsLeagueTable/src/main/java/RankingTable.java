@@ -1,6 +1,15 @@
 import java.util.Arrays;
 import java.util.Comparator;
 
+/**
+ *  Solution to the Codewars Kata: Sports League Ranking
+ *
+ *  Authjor Sebastian Lindfors
+ */
+
+
+
+
 public class RankingTable {
 
     public static int[] computeRanks(int number, int[][] games) {
