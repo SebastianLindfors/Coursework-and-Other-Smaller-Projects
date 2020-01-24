@@ -4,7 +4,7 @@ import java.util.Comparator;
 /**
  *  Solution to the Codewars Kata: Sports League Ranking
  *
- *  Authjor Sebastian Lindfors
+ *  Author Sebastian Lindfors
  */
 
 
