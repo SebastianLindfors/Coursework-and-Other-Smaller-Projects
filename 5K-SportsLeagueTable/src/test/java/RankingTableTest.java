@@ -2,7 +2,6 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 class RankingTableTest {
-
         @Test
         public void example1() {
             assertArrayEquals(new int[]{4,4,6,3,1,2},
