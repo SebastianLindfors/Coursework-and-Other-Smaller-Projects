@@ -33,7 +33,11 @@ public class PathFinder2 {
             edgeTo.add(newLink);
         }
 
-        
+        mazeNode getShortestPathHere() {
+            return shortestPathHere;
+        }
+
+
 
 
 
