@@ -37,6 +37,10 @@ public class PathFinder2 {
             return shortestPathHere;
         }
 
+        boolean isVisited() {
+            return visited;
+        }
+
 
 
 
