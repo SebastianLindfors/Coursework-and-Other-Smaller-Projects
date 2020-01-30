@@ -4,7 +4,10 @@ import java.util.List;
 public class PathFinder2 {
 
     public static int pathFinder(String maze) {
-        return 0;
+
+        mazeNode targetNode = new mazeNode();
+
+        return targetNode.getStepsToThisNode();
     }
 
     private static class mazeNode {
@@ -19,7 +22,7 @@ public class PathFinder2 {
 
         String nodeID;
 
-        public mazeNode(String nodeID) {
+        public mazeNode() {
 
             this.nodeID = nodeID;
 
@@ -31,10 +34,20 @@ public class PathFinder2 {
 
         void addLinkToNode(mazeNode newLink) {
             edgeTo.add(newLink);
+            if (newLink.getStepsToThisNode() != -1) {
+                if (newLink.getStepsToThisNode() + 1 < this.getStepsToThisNode()) {
+                    this.stepsToThisNode = newLink.getStepsToThisNode() + 1;
+                    shortestPathHere = newLink;
+                }
+            }
         }
 
         mazeNode getShortestPathHere() {
             return shortestPathHere;
+        }
+
+        int getStepsToThisNode() {
+            return stepsToThisNode;
         }
 
         boolean isVisited() {
