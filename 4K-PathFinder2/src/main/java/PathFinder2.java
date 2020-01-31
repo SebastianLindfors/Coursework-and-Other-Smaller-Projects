@@ -1,11 +1,27 @@
+import java.awt.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class PathFinder2 {
 
     public static int pathFinder(String maze) {
 
+        String[] mazeLines = maze.split("\n");
+        Map<Point, mazeNode> mazeMap = new HashMap<>();
+        for (int i = 0; i < mazeLines.length; i++) {
+            char[] mazeLine = mazeLines[i].toCharArray();
+            for (int j = 0; j < mazeLine.length; j++) {
+                
+            }
+
+        }
+        mazeNode startNode = new mazeNode();
         mazeNode targetNode = new mazeNode();
+
+
+
 
         return targetNode.getStepsToThisNode();
     }
@@ -24,7 +40,6 @@ public class PathFinder2 {
 
         public mazeNode() {
 
-            this.nodeID = nodeID;
 
             stepsToThisNode = -1;
 
