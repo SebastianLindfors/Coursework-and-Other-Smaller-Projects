@@ -13,6 +13,10 @@ public class PathFinder2 {
         for (int i = 0; i < mazeLines.length; i++) {
             char[] mazeLine = mazeLines[i].toCharArray();
             for (int j = 0; j < mazeLine.length; j++) {
+                if (mazeLine[j] == '.') {
+                    Point currentPoint = new Point(i,j);
+                    mazeMap.put(currentPoint, new mazeNode());
+                }
                 
             }
 
