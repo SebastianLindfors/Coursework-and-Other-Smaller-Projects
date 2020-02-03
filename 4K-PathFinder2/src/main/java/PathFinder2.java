@@ -17,12 +17,17 @@ public class PathFinder2 {
                     Point currentPoint = new Point(i,j);
                     mazeMap.put(currentPoint, new mazeNode());
                 }
-                
+
             }
 
         }
+
         mazeNode startNode = new mazeNode();
         mazeNode targetNode = new mazeNode();
+
+        mazeMap.put(new Point(0,0), startNode);
+        mazeMap.put(new Point(mazeLines.length - 1,mazeLines.length -1), targetNode);
+
 
 
 
