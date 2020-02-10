@@ -33,6 +33,9 @@ public class PathFinder2 {
 
 
         return targetNode.getStepsToThisNode();
+
+
+
     }
 
     private static class mazeNode {
