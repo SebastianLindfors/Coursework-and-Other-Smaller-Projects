@@ -38,6 +38,16 @@ public class PathFinder2 {
 
     }
 
+    static List<mazeNode> getAdjacentNodes(mazeNode centerNode) {
+
+        List<mazeNode> output = new ArrayList<>();
+
+
+
+        return output;
+    }
+
+
     private static class mazeNode {
 
         List<mazeNode> edgeTo = new ArrayList<>();
@@ -68,6 +78,8 @@ public class PathFinder2 {
                 }
             }
         }
+
+
 
         mazeNode getShortestPathHere() {
             return shortestPathHere;
