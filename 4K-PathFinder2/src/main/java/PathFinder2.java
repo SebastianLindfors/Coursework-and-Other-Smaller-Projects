@@ -41,9 +41,6 @@ public class PathFinder2 {
     static List<mazeNode> getAdjacentNodes(mazeNode centerNode) {
 
         List<mazeNode> output = new ArrayList<>();
-
-
-
         return output;
     }
 
