@@ -27,6 +27,26 @@ public class PathFinder2 {
 
         mazeMap.put(new Point(0,0), startNode);
         mazeMap.put(new Point(mazeLines.length - 1,mazeLines.length -1), targetNode);
+        for (Point p: mazeMap.keySet()) {
+            Point otherPoint = new Point(p.x - 1, p.y);
+            if (mazeMap.containsKey(otherPoint)) {
+                mazeMap.get(p).addLinkToNode(mazeMap.get(otherPoint));
+            }
+            otherPoint = new Point(p.x + 1, p.y);
+            if (mazeMap.containsKey(otherPoint)) {
+                mazeMap.get(p).addLinkToNode(mazeMap.get(otherPoint));
+            }
+            otherPoint = new Point(p.x, p.y - 1);
+            if (mazeMap.containsKey(otherPoint)) {
+                mazeMap.get(p).addLinkToNode(mazeMap.get(otherPoint));
+            }
+            otherPoint = new Point(p.x, p.y + 1);
+            if (mazeMap.containsKey(otherPoint)) {
+                mazeMap.get(p).addLinkToNode(mazeMap.get(otherPoint));
+            }
+
+        }
+
 
 
 
