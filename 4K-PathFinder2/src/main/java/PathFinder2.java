@@ -27,6 +27,7 @@ public class PathFinder2 {
 
         mazeMap.put(new Point(0,0), startNode);
         mazeMap.put(new Point(mazeLines.length - 1,mazeLines.length -1), targetNode);
+
         for (Point p: mazeMap.keySet()) {
             Point otherPoint = new Point(p.x - 1, p.y);
             if (mazeMap.containsKey(otherPoint)) {
@@ -75,7 +76,7 @@ public class PathFinder2 {
         boolean isTargetNode;
         boolean visited;
 
-        String nodeID;
+        String nodeIDs;
 
         public mazeNode() {
 
