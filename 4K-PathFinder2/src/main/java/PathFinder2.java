@@ -76,7 +76,7 @@ public class PathFinder2 {
         boolean isTargetNode;
         boolean visited;
 
-        String nodeIDs;
+        String nodeID;
 
         public mazeNode() {
 
