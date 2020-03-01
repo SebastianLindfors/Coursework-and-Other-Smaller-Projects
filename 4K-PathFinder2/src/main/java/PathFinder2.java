@@ -90,6 +90,7 @@ public class PathFinder2 {
         void addLinkToNode(mazeNode newLink) {
             edgeTo.add(newLink);
             if (newLink.getStepsToThisNode() != -1) {
+                
                 if (newLink.getStepsToThisNode() + 1 < this.getStepsToThisNode()) {
 
                     this.stepsToThisNode = newLink.getStepsToThisNode() + 1;
