@@ -91,8 +91,11 @@ public class PathFinder2 {
             edgeTo.add(newLink);
             if (newLink.getStepsToThisNode() != -1) {
                 if (newLink.getStepsToThisNode() + 1 < this.getStepsToThisNode()) {
+
                     this.stepsToThisNode = newLink.getStepsToThisNode() + 1;
+
                     shortestPathHere = newLink;
+
                 }
             }
         }
