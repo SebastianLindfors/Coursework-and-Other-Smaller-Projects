@@ -97,7 +97,7 @@ public class PathFinder2 {
 
                     shortestPathHere = newLink;
 
-                    String test = "abc";
+                    String othertest = "abc";
 
                 }
             }
